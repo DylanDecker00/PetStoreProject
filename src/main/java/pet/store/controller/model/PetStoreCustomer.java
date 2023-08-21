@@ -8,14 +8,18 @@ import pet.store.entity.Customer;
 @NoArgsConstructor
 public class PetStoreCustomer {
     private Long id;
-    private String name;
+    private String firstName;
+    private String lastName;
+    private String phone;
     private String address;
-    // ... (other fields)
+    // ... (other fields, if any)
 
     public PetStoreCustomer(Customer customer) {
         this.id = customer.getId();
-        this.name = customer.getName();
-        this.address = customer.getAddress();
-        // ... (set other fields)
+        this.firstName = customer.getFirstName();
+        this.lastName = customer.getLastName();
+        this.phone = customer.getPhone();
+        this.address = customer.getAddress();  // Assuming the Customer entity also has this field.
+        // ... (set other fields, if any)
     }
 }
